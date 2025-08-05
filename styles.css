@@ -1,0 +1,127 @@
+/* Design Tokens from PomodoroPro spec */
+:root {
+  --radius-md: 16px;
+  --radius-sm: 12px;
+  --shadow-elev: 0 6px 24px rgba(16,24,40,0.08);
+  --shadow-elev-dark: 0 8px 28px rgba(0,0,0,0.45);
+}
+
+:root[data-theme="vital"][data-mode="light"] {
+  --color-bg: #F7F8FA;
+  --color-surface: #FFFFFF;
+  --color-text: #121417;
+  --color-text-secondary: #4B5563;
+  --color-border: #E5E7EB;
+  --color-primary: #6C5CE7;
+  --color-primary-hover: #5A4BD6;
+  --color-primary-pressed: #4C3FC0;
+  --color-accent: #00CEC9;
+  --color-success: #10B981;
+  --color-warning: #F59E0B;
+  --color-danger: #EF4444;
+  --timer-gradient: linear-gradient(135deg, #6C5CE7 0%, #00CEC9 100%);
+}
+
+:root[data-theme="vital"][data-mode="dark"] {
+  --color-bg: #0E0F10;
+  --color-surface: #16181B;
+  --color-text: #E9EDF2;
+  --color-text-secondary: #A7B0BA;
+  --color-border: #2A2E33;
+  --color-primary: #8B7CFF;
+  --color-primary-hover: #7A6DE6;
+  --color-primary-pressed: #695CD1;
+  --color-accent: #11E1DB;
+  --color-success: #34D399;
+  --color-warning: #FBBF24;
+  --color-danger: #F87171;
+  --timer-gradient: linear-gradient(135deg, #8B7CFF 0%, #11E1DB 100%);
+}
+
+:root[data-theme="serenity"][data-mode="light"] {
+  --color-bg: #F5FAF7;
+  --color-surface: #FFFFFF;
+  --color-text: #0E3025;
+  --color-text-secondary: #3E5E54;
+  --color-border: #DDE7E1;
+  --color-primary: #2BAA7B;
+  --color-primary-hover: #23946B;
+  --color-primary-pressed: #1B7E5A;
+  --color-accent: #3BA4E6;
+  --color-success: #22C55E;
+  --color-warning: #F59E0B;
+  --color-danger: #EF4444;
+  --timer-gradient: linear-gradient(135deg, #2BAA7B 0%, #3BA4E6 100%);
+}
+
+:root[data-theme="serenity"][data-mode="dark"] {
+  --color-bg: #0A1411;
+  --color-surface: #101E19;
+  --color-text: #E7F3ED;
+  --color-text-secondary: #AFCEC2;
+  --color-border: #1B2C26;
+  --color-primary: #37C490;
+  --color-primary-hover: #2CAF81;
+  --color-primary-pressed: #229A72;
+  --color-accent: #55B9F0;
+  --color-success: #34D399;
+  --color-warning: #FBBF24;
+  --color-danger: #F87171;
+  --timer-gradient: linear-gradient(135deg, #37C490 0%, #55B9F0 100%);
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.app {
+  background: var(--color-surface);
+  padding: 2rem;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-elev);
+  text-align: center;
+  max-width: 400px;
+}
+
+.timer-display {
+  font-size: 3rem;
+  margin: 1rem 0;
+  background: var(--timer-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+button {
+  margin: 0.25rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  background: var(--color-primary);
+  color: #FFF;
+}
+
+button:hover {
+  background: var(--color-primary-hover);
+}
+
+button:disabled {
+  background: var(--color-border);
+  cursor: not-allowed;
+}
+
+.controls, .settings {
+  margin-top: 1rem;
+}
+
+.settings label {
+  display: block;
+  margin: 0.5rem 0;
+}

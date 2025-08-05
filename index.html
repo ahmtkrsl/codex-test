@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html data-theme="vital" data-mode="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PomodoroPro</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <h1>PomodoroPro</h1>
+    <div id="timer" class="timer-display">25:00</div>
+    <div id="status">Ready</div>
+    <div class="controls">
+      <button id="start">Start</button>
+      <button id="pause" disabled>Pause</button>
+      <button id="reset">Reset</button>
+      <button id="add2">+2 min</button>
+      <button id="add5">+5 min</button>
+    </div>
+    <div class="settings">
+      <label>Work <input id="workDuration" type="number" min="15" max="60" value="25"></label>
+      <label>Short Break <input id="shortBreakDuration" type="number" min="5" max="30" value="5"></label>
+      <label>Long Break <input id="longBreakDuration" type="number" min="15" max="60" value="15"></label>
+      <button id="applySettings">Apply</button>
+    </div>
+    <div id="sessionCount">Session: 0</div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
